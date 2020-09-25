@@ -6,9 +6,16 @@ namespace TreeApp
 {
   using System.IO;
 
+  /// <summary>
+  /// Tree
+  /// </summary>
   public class Tree
   {
 
+
+    /// <summary>
+    /// Constructor
+    /// </summary>
     public Tree()
     {
       Root = new Node();
@@ -21,13 +28,25 @@ namespace TreeApp
       InitializeTree(path);
     }
 
+    /// <summary>
+    /// Root of the tree
+    /// </summary>
     public Node Root { get; set; }
 
-    public Node Current { get; set; }
+    /// <summary>
+    /// helper property for current node
+    /// </summary>
+    private Node Current { get; set; }
 
+    /// <summary>
+    /// Possible property for size
+    /// </summary>
     public int Size { get; set; }
 
-    public int CurrentLevel { get; set; }
+    /// <summary>
+    /// helper property for current level
+    /// </summary>
+    private int CurrentLevel { get; set; }
 
 
     private void InitializeTree(string path)
@@ -49,7 +68,7 @@ namespace TreeApp
         {
           Root.Nodes.Add(node);
           node.Parent = Root;
-          Current = node;
+          Current = node; // for learning purposes placed here
         }
         else if (nodeLevel == 1)
         {
@@ -84,7 +103,9 @@ namespace TreeApp
 
     }
 
-
+    /// <summary>
+    /// Display tree in console
+    /// </summary>
     public void PrintTree()
     {
       foreach (var rootNode in Root.Nodes)

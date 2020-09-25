@@ -1,0 +1,12 @@
+﻿Root 0 (not visible)
+	Node_1_Level_1 > root
+		Node_2_Level_2
+		Node_3_Level_2
+		Node_4_Level_2 > root
+			Node_5_Level_3
+	Node_6_Level_1
+	Node_7_Level_1
+		Node_8_Level_2 > root
+			Node_9_Level_3
+			Node_10_Level_3
+		Node_11_Level_2
